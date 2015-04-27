@@ -1,0 +1,78 @@
+﻿@model TeststingDotNet.Models.Room
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Room</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Reserved)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Reserved)
+            @Html.ValidationMessageFor(model => model.Reserved)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SeaSide)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SeaSide)
+            @Html.ValidationMessageFor(model => model.SeaSide)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Type)
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Price)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Price)
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Persons)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Persons)
+            @Html.ValidationMessageFor(model => model.Persons)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Meniu)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Meniu)
+            @Html.ValidationMessageFor(model => model.Meniu)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pricemeniu)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pricemeniu)
+            @Html.ValidationMessageFor(model => model.Pricemeniu)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
